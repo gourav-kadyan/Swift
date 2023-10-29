@@ -1,0 +1,11 @@
+class Exercise {
+    //1. Implement a function that takes in array and returns the smallest element in the array.
+    static func findMinElement(in array: [Int]) -> Int? {
+        return array.min()
+    }
+    
+    //2. Implement a function that finds whether an element exists in the array.
+    static func isElement(element: Int, presentIn array: [Int]) -> Bool {
+        return array.contains(element)
+    }
+}

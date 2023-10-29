@@ -1,0 +1,32 @@
+class Exercise {
+    // Implement a function that adds takes an array of strings (e.g. fruit names) and adds inserts it into a set. The function then should return the new set.
+    static func createSet(from array: [String]) -> Set<String> {
+        return Set(array)
+    }
+    
+    // Implement a function that takes an integer parameter and a set parameter. The function should return true if the set parameter contains the integer parameter, and it returns false otherwise.
+    static func contains(value: Int, in integerSet: Set<Int>) -> Bool {
+        return integerSet.contains(value)
+    }
+    
+    // Implement a function that takes two parameters: a set of Double numbers and a value to remove from that set. The function creates a new set out of the input set and removes the value from the set. The function then returns a new set.
+    static func remove(value: Double, from inputSet: Set<Double>) -> Set<Double> {
+        var newSet = inputSet
+        newSet.remove(value)
+        return newSet
+    }
+    
+    // Implement a function that takes one parameter: a set of Strings. The function checks whether the set is empty. If it is empty, then it returns true, otherwise it returns false.
+    static func isSetEmpty(setToCheck: Set<String>) -> Bool {
+        return setToCheck.isEmpty
+    }
+    
+    // Implement a function that takes one parameter a set of Strings. The set in Swift keeps elements in an unsorted fashion. The function should sort the elements, iterate over the elements, print each element and return an array of sorted Strings.
+    static func prepareSortedSetContent(from unsortedSet: Set<String>) -> [String] {
+        let sortedArray = unsortedSet.sorted()
+        for element in sortedArray {
+            print(element)
+        }
+        return sortedArray
+    }
+}

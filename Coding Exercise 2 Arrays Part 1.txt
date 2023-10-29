@@ -1,0 +1,12 @@
+class Exercise {
+    //1. Implement a function that takes in array containing integer numbers and finds the sum of all elements in the array.
+    static func findSum(from array: [Int]) -> Int {
+        
+        return array.reduce(0,+)
+    }
+    
+    //2. Implement a function that takes in array containing strings and returns the sorted array.
+    static func sort(array: [String]) -> [String] {
+        return array.sorted()
+    }
+}
