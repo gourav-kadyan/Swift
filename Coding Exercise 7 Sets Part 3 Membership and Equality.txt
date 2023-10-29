@@ -1,0 +1,37 @@
+class Exercise {
+    // Implement a function that takes 2 set parameters: set A and set B. The function should check whether set A is a subset of set B and return the result as a boolean value. 
+    static func checkIf(setA: Set<Int>, subSetOf setB: Set<Int>) -> Bool {
+        
+        return setA.isSubset(of: setB)
+    }
+    
+    // Implement a function that takes 2 set parameters: set A and set B. The function should check whether set A is a superset of set B and returns the result as a boolean value. 
+    static func checkIf(setA: Set<Int>, supersetOf setB: Set<Int>) -> Bool {
+        
+        return setA.isSuperset(of: setB)
+    }
+    
+    // Implement a function that takes 2 set parameters: set A and set B. The function should return true if both sets are equal, false otherwise.
+    static func checkIf(setA: Set<String>, equalTo setB: Set<String>) -> Bool {
+        
+        return setA == setB
+    }
+    
+    // Implement a function that takes 2 set parameters: set A and set B. The function should return true if there is no common elements between two sets (i.e. the sets are disjoint), false otherwise. 
+    static func checkIf(setA: Set<String>, isDisjointWith setB: Set<String>) -> Bool {
+        
+       return setA.isDisjoint(with: setB)
+    }
+    
+    // Implement a function that takes 2 set parameters: set A and set B. The function should return true if set A is a strict super set of set B, false otherwise.
+    static func checkIf(setA: Set<Int>, isStrictSupersetOf setB: Set<Int>) -> Bool {
+        
+        return setA.isStrictSuperset(of: setB)
+    }
+    
+    // Implement a function that takes 2 set parameters: set A and set B. The function should return true if set A is a strict subset of set B, false otherwise.
+    static func checkIf(setA: Set<Int>, isStrictSubsetOf setB: Set<Int>) -> Bool {
+        
+        return setA.isStrictSubset(of: setB)
+    }
+}

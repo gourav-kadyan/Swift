@@ -1,0 +1,26 @@
+class Exercise {
+    
+    // Implement a function that takes two parameters: one set containing positive integers and another set containing negative integers. The function should merge two sets (i.e. union) and return it a result.
+    static func createUnion(of positiveNumbersSet: Set<Int>, and negativeNumberSet: Set<Int>) -> Set<Int> {
+        
+        return positiveNumbersSet.union(negativeNumberSet)
+    }
+    
+    // Implement a function that takes two parameters: city names A and city names B. The function should find out intersection of two sets and return it as a result.
+    static func findIntersection(of citiesA: Set<String>, and citiesB: Set<String>) -> Set<String> {
+        
+        return citiesA.intersection(citiesB)
+    }
+    
+    // Implement a function that takes two parameters: employees and friends. The function should subtract two sets in order to remove content of friends set from the employees set. The function then returns the result.
+    static func findSubtraction(of employees: Set<String>, and friends: Set<String>) -> Set<String> {
+        
+        return employees.subtracting(friends)
+    }
+    
+    // Implement a function that takes two set A and B as parameters. Sets contain numbers. The function should calculate the symmetric difference between sets and return it as a result. 
+    static func findSymmetricDifference(of setA: Set<Int>, and setB: Set<Int>) -> Set<Int> {
+        
+        return setA.symmetricDifference(setB)
+    }
+}

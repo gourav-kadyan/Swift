@@ -1,0 +1,21 @@
+class Exercise {
+    // Implement a function that takes a dictionary as a parameter. 
+    // The dictionary keys are String and values are Int. 
+    // The function should return an array containing all the keys of the dictionary.
+    // The returned array should be sorted.
+    static func getAllSortedKeys(of dictionary: [String: Int]) -> [String] {
+    
+    let sortedKeys = dictionary.keys.sorted()
+    return sortedKeys
+        
+    }
+    
+    // Implement a function that takes a dictionary as a parameter. 
+    // The dictionary keys are String and values are Int. 
+    // The function should return an array containing all the values of the dictionary. 
+    // The returned array should be sorted.
+    static func getAllSortedValues(of dictionary: [String: Int]) -> [Int] {
+        
+        return dictionary.values.sorted()
+    }
+}
