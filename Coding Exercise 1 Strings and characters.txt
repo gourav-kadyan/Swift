@@ -1,0 +1,10 @@
+class Exercise {
+    static func stringAppearsInFront(exampleString: String, prefixString: String) -> Bool {
+    
+        return exampleString.hasPrefix(prefixString)
+    
+    }    
+    static func concatenateString(part1: String, part2: String) -> String {
+        return part1 + part2
+    }
+}
