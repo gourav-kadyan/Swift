@@ -1,0 +1,107 @@
+import UIKit
+
+
+
+class ViewController: UIViewController {
+
+
+
+
+
+@IBOutlet var citiesTableView: UITableView!
+
+
+
+var cities: [String] = ["Abu Dhabi", "Wenzhou", "Almaty", "Kyoto", "Bhopal", "London", "Suwon", "Yangon", "Kinshasa", "Lima"]
+
+
+
+var cityCountry: [String: String] = ["Abu Dhabi" : "United Arab Emirates", "Wenzhou": "China", "Almaty": "Kazakhstan", "Kyoto": "Japan", "Bhopal": "India", "London": "United Kingdom", "Suwon": "South Korea", "Yangon": "Myanmar", "Kinshasa": "Democratic Republic of Congo", "Lima": "Peru"]
+
+
+
+struct Constants {
+
+static let cellIdentifier = "CityCell"
+
+}
+
+
+
+override func viewDidLoad() {
+
+super.viewDidLoad()
+
+// Do any additional setup after loading the view.
+
+citiesTableView.register(UITableViewCell.self ,
+
+forCellReuseIdentifier: Constants.cellIdentifier)
+
+}
+
+
+
+}
+
+
+
+extension ViewController: UITableViewDataSource {
+
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+return cities.count
+
+}
+
+
+
+func numberOfSections(in tableView: UITableView) -> Int {
+
+return 1
+
+}
+
+
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+let tableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+
+
+
+var cellContentConfiguration = tableViewCell.defaultContentConfiguration()
+
+let cityName = cities[indexPath.row]
+
+cellContentConfiguration.text = cityName
+
+cellContentConfiguration.secondaryText = cityCountry[cityName] ?? ""
+
+tableViewCell.contentConfiguration = cellContentConfiguration
+
+
+
+return tableViewCell
+
+
+
+}
+
+
+
+}
+
+
+
+extension ViewController: UITableViewDelegate {
+
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+print("user tapped on cell at \(indexPath) with corresponding city \(cities[indexPath.row]) in the country of \(cityCountry[cities[indexPath.row]] ?? "")")
+
+tableView.deselectRow(at: indexPath, animated: true)
+
+
+
+}}
